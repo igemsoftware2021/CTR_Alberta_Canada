@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="menu2.css">
+
+  <ul>
+    <img src='https://cdn.discordapp.com/attachments/806311765947449377/844349440101711882/tryyyyy.png' style='position:absolute; top:0; left:0;' width='80px' height='80px'>
+    <li><a href="homeattendee.html">Home</a></li>
+    <li><a href="inputlink.html"> Carbon Calculator</a></li>
+    <li><a href="trees.html">Tree Planting Calculator</a></li>
+    <li><a href="offsetting.html">Offsetting Guide</a></li>
+    <li><a href="facilities.html">Sustainable Facility Options</a></li>
+    <li style="float:right"><a class="active" href="choose.html">Change Mode</a></li>
+  </ul>
+
+  <br>
+
+
+
+  
+
+  <div class ="how">
+    <button onclick="window.location.href='calculatorhow.html';" class="check" style="text-align: center;" >How we came up with our Carbon Calculator </button>
+  </div>
+
+
+
+<div class = "center">
+
+  
+
+	
+<meta charset="UTF-8">
+
+
+
+
+
+
+
+</head>
+
+<script>
+  function computeval(){
+      var distance1 = document.getElementById('distance1').value;
+      var distance2 = document.getElementById('distance2').value;
+      var hotel = document.getElementById('hotel').value;
+      var emair = (distance1 * 0.0665).toFixed(2);
+      var emland = emair + (distance2 * 0.1809).toFixed(0);
+      var totalem = emland + (hotel * 19.2).toFixed(0);
+   totalem.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    tot=document.getElementById('totalem').innerHTML = "Total Emissions (kg) = "+totalem;
+   
+  
+  } 
+
+  </script>
+
+
+
+<h2><b>CO<sub>2</sub> Calculator</b></h2>
+
+<body>
+
+Please fill out these input fields to determine the carbon dioxide that would be emitted by attending this event. If one of the input fields does not apply to you leave it blank. 
+	
+
+<form action="calc.php" method="POST">
+
+  <p>First Name :
+    
+    <input type ="text" id="fname" name="fname" type="text">
+  </p>
+  
+
+  <p>Last Name :
+    
+    <input type ="text" id="lname" name="lname" type="text">
+  </p>
+  
+
+  <p><b>Plane Travel</b></p>	
+	
+  <p>Distance To Event City (km) : 
+    
+    <input type ="text" id="distance1" name="distance1" type="number" min="0" max="1000000" onchange="computeval()">
+  </p>
+    
+  <p><b>Car Travel</b></p>	
+    
+  <p>Distance to Event City (km) :
+    
+    <input type ="text" id="distance2" name="distance2" type="number" min="0" max="1000000" onchange="computeval()">
+  </p>
+    
+  <p><b>Accomodation</b></p>	
+    
+  <p>Number of Hotel Night Stays (days) :
+    
+    <input type ="text" id="hotel" name="hotel" type="number" min="0" max="1000000" onchange="computeval()">
+  </p>
+  
+    
+  <h2 id="totalem"></h2>
+  
+  
+  <button onclick="computeval()"; class="btnop" id="button1">Calculate!</button>
+  
+  
+  
+  
+  <br>
+  
+
+
+</form>
+ 
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<br>
+
+
+</body>
+
+
+
+
+</div> 
+
+
+<style>
+
+.center {
+  margin: auto;
+  width: 60%;
+  border: 4px solid #04AA6D;
+  padding: 10px;
+}
+
+.btnop{
+  background: #04AA6D;
+  color: white;
+  font-size: 1.2em;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
+  border-width: 0px;
+
+}
+
+.btnop:hover {
+      background-color: #04AA6D;
+      }
+
+
+      .how{
+
+color: black;
+font-size: 1.2em;
+position: relative;
+margin-top: 20px;
+}
+
+
+
+
+.check {
+  background-color: #333;
+  width: 200px;
+  height: 50px;
+  color:white;
+  font-size: 0.7em;
+  position: relative;
+  border-radius: 5px;
+  border-width: 0px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.check:hover{
+  background-color: black;
+}
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;;
+}
+
+
+  input[type=submit]:hover {
+    color: black;
+}
+
+body {background-color: #f1f1f1;}
+h1   {color: white;}
+p    {color: black;}
+h2 {letter-spacing: 3px;} 
+h3 { font-size: large;}
+h3 {color: black;}
+
+
+
+</style>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML> 
+<html> 
+  <link rel="stylesheet" href="menu.css">
+
+    <ul>
+        <img src='https://cdn.discordapp.com/attachments/806311765947449377/844349440101711882/tryyyyy.png' style='position:absolute; top:0; left:0;' width='80px' height='80px'>
+        <li><a href="homehost.html">Home</a></li>
+        <li><a href="createlink.html">Create Event</a></li>
+        <li><a href="lookevents.html">My Events</a></li>
+        <li style ="float:right"><img src="https://lh3.googleusercontent.com/ogw/ADea4I6qDzNhFKNdT0UdCb-Ep_4C_Jzt3GfCxuwwZnwMTQ=s64-c-mo" alt="Avatar" class="avatar"></li>
+        <li style="float:right"><a class="active" href="choose.html">Change Mode</a></li>
+    </ul>
+
+    
+
+    
+    <body style = "text-align:center;">
+          
+        <h1 style = "color:#04AA6D;" > 
+            Create an Event
+        </h1>
+          
+        <p id = "GFG_UP" style =
+            "font-size: 19px; font-weight: bold;">
+        </p>
+          
+        <button onclick = "GFG_Fun()">
+            click here
+        </button>
+          
+        <p id = "GFG_DOWN" style =
+            "color:#04AA6D; font-size: 24px; font-weight: bold;">
+        </p>
+
+
+          
+        <script>
+            var el_up = document.getElementById("GFG_UP");
+            var el_down = document.getElementById("GFG_DOWN");
+              
+            el_up.innerHTML = "Click on the button to generate an access code so your attendees can use our carbon calculator"
+            ;
+              
+            function GFG_Fun() {
+                  
+                var a = document.createElement('a'); 
+                  
+                var link = document.createTextNode("Carbon Calculator Link");
+                  
+                a.appendChild(link); 
+                  
+                a.title = "Carbon Calculator"; 
+                  
+                a.href = "file:///Users/alisonstanley/Desktop/CO2%20EASY%20APP/index.html"; 
+
+                document.body.appendChild(a); 
+
+               
+            }
+        </script> 
+
+
+
+    </body> 
+
+<style>
+
+    .btnop:hover {
+        background-color: green;
+    }
+
+    .btnop {
+
+        background: #04AA6D;
+        color: white;
+        border-radius: 5px;
+        border-width: 0px;
+    }
+   
+
+
+
+</style>
+
+</html> 
