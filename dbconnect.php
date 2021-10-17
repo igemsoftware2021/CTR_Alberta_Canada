@@ -21,9 +21,10 @@
 
   echo '';
   echo '<br>';
-  echo ' '.$mysqli->host_info;
+  echo ' ';
   echo '<br>';
-  echo ''.$mysqli->protocol_version;
+  echo '';
 
 
 ?>
+
