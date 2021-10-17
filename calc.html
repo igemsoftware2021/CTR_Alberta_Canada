@@ -45,9 +45,9 @@
       var distance1 = document.getElementById('distance1').value;
       var distance2 = document.getElementById('distance2').value;
       var hotel = document.getElementById('hotel').value;
-      var emair = (distance1 * 0.0665).toFixed(2);
-      var emland = emair + (distance2 * 0.1809).toFixed(0);
-      var totalem = emland + (hotel * 19.2).toFixed(0);
+      var emair = (distance1 * 0.15098).toFixed(2);
+      var emland = emair + (distance2 * 0.108).toFixed(0);
+      var totalem = emland + (hotel * 27.397).toFixed(0);
    totalem.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     tot=document.getElementById('totalem').innerHTML = "Total Emissions (kg) = "+totalem;
    
@@ -81,27 +81,34 @@ Please fill out these input fields to determine the carbon dioxide that would be
 
   <p><b>Plane Travel</b></p>	
 	
-  <p>Distance To Event City (km) : 
+  <p>Distance To Event (km) : 
     
-    <input type ="text" id="distance1" name="distance1" type="number" min="0" max="1000000" onchange="computeval()">
+    <input type ="text" id="distance1" name="distance1" type="number" min="0" max="1000000">
   </p>
     
-  <p><b>Car Travel</b></p>	
+  <p><b>Road Travel</b></p>	
     
-  <p>Distance to Event City (km) :
+  <p>Distance to Event (km) :
     
-    <input type ="text" id="distance2" name="distance2" type="number" min="0" max="1000000" onchange="computeval()">
+    <input type ="text" id="distance2" name="distance2" type="number" min="0" max="1000000">
   </p>
     
   <p><b>Accomodation</b></p>	
     
   <p>Number of Hotel Night Stays (days) :
     
-    <input type ="text" id="hotel" name="hotel" type="number" min="0" max="1000000" onchange="computeval()">
+    <input type ="text" id="hotel" name="hotel" type="number" min="0" max="1000000">
   </p>
   
     
   <h2 id="totalem"></h2>
+
+
+  <button class="continue" id="button1">Submit Form</button>
+
+</form>
+
+<br>
   
   
   <button onclick="computeval()"; class="btnop" id="button1">Calculate!</button>
@@ -113,7 +120,7 @@ Please fill out these input fields to determine the carbon dioxide that would be
   
 
 
-</form>
+
  
 
 
@@ -172,6 +179,10 @@ margin-top: 20px;
 }
 
 
+.continue {
+
+float: right;
+}
 
 
 .check {
