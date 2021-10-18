@@ -18,11 +18,12 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+//insert form data into MySql database
 $sql = "INSERT INTO Users(first_name, last_name, email_address, password)
 VALUES ('$first_name', '$last_name', '$email_address', '$password')";
 
 
-
+//if values are successfully inserted
 if ($conn->query($sql) === TRUE) {
   echo '<h1>Welcome!</h1>' ;
   echo '<h3>Login to begin!</h3>' ;
