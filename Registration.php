@@ -18,12 +18,11 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-//insert form data into MySql database
 $sql = "INSERT INTO Users(first_name, last_name, email_address, password)
 VALUES ('$first_name', '$last_name', '$email_address', '$password')";
 
 
-//if values are successfully inserted
+
 if ($conn->query($sql) === TRUE) {
   echo '<h1>Welcome!</h1>' ;
   echo '<h3>Login to begin!</h3>' ;
@@ -49,53 +48,52 @@ $conn->close();
     <title>Offsetting Guide</title></title>
 
 <style>
-  
-  
-    div {
 
-  background-color: white;
-  width: 500px;
-  height: 100px;
-  padding: 50px;
-  margin: auto;
-  margin-top: 60px;
-  text-align: center;
-  
-    }
+
+div {
+
+background-color: white;
+width: 500px;
+height: 100px;
+padding: 50px;
+margin: auto;
+margin-top: 60px;
+text-align: center;
+
+  }
 
 .btnop {
 
-    background: #04AA6D;
-        color: white;
-        border-radius: 5px;
-        border-width: 0px;
-        height: 150px;
-        width: 450px;
-        font-size: 1.2em;
+  background: #04AA6D;
+      color: white;
+      border-radius: 5px;
+      border-width: 0px;
+      height: 150px;
+      width: 450px;
+      font-size: 1.2em;
 
 }
 
 .btnop:hover {
-    background-color: green;
+  background-color: green;
 }
 
 h1 {
-      color:#04AA6D;
-      margin-top: 100px;
-      text-align: center;
-      font-size: 3em;
-  }
+    color:#04AA6D;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 3em;
+}
 
 
-  h3 {
-      color:black;
-      margin-top: 120px;
-      text-align: center;
-      font-size: 1.2em;
-  }
+h3 {
+    color:black;
+    margin-top: 120px;
+    text-align: center;
+    font-size: 1.2em;
+}
 
 
+</style>
+  
 
-
-
-      
